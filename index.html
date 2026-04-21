@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Diagnostic Studio — An AI-powered desktop IDE with intelligent code analysis, natural language code generation, and real-time collaboration. Download the latest version now.">
+  <meta name="keywords" content="AI IDE, Code Editor, AI Code Analysis, Real-time Collaboration, Desktop IDE, Code Generation, AI Diagnostic Studio">
+  <meta name="author" content="AI Diagnostic Studio">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:title" content="AI Diagnostic Studio — AI-Powered Development Environment">
+  <meta property="og:description" content="Intelligent code diagnostics, automated bug detection, and collaborative coding in a modern IDE.">
+  <meta property="og:type" content="website">
+  <title>AI Diagnostic Studio — AI-Powered Development Environment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='55' font-weight='bold' fill='white' text-anchor='middle' font-family='sans-serif'>AI</text></svg>">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-grid"></div>
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+  </div>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__brand">
+        <div class="navbar__logo">AI</div>
+        <span class="navbar__title">AI Diagnostic Studio</span>
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#features" class="navbar__link">Features</a></li>
+        <li><a href="#architecture" class="navbar__link">Architecture</a></li>
+        <li><a href="#requirements" class="navbar__link">Requirements</a></li>
+        <li><a href="#use-cases" class="navbar__link">Use Cases</a></li>
+        <li><a href="#tech-stack" class="navbar__link">Tech Stack</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1B5UkceSL4uQeW7M4w4EOEhnEGADZLt66/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="navbar__download" id="navDownloadBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download .exe
+          </a>
+        </li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero__glow"></div>
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Version 1.0 — Software Requirements Specification
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-gradient">AI Diagnostic Studio</span>
+      </h1>
+      <p class="hero__subtitle">
+        A desktop-integrated development environment combining AI-powered code analysis, 
+        natural language generation, and real-time collaboration — built to supercharge developer productivity.
+      </p>
+      <div class="hero__actions">
+        <a href="https://drive.google.com/file/d/1B5UkceSL4uQeW7M4w4EOEhnEGADZLt66/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="heroDownloadBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows
+        </a>
+        <a href="#features" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          Explore SRS Document
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-value">6</div>
+          <div class="hero__stat-label">Core Modules</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">18</div>
+          <div class="hero__stat-label">Functional Requirements</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">15</div>
+          <div class="hero__stat-label">Non-Functional Reqs</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">5</div>
+          <div class="hero__stat-label">Use Cases</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INTRODUCTION ====== -->
+  <section class="section" id="introduction">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 1</div>
+        <h2 class="section__title">Introduction</h2>
+        <p class="section__description">
+          A comprehensive overview of the AI Diagnostic Studio — its purpose, scope, and the problems it solves for modern development teams.
+        </p>
+      </div>
+
+      <div class="content-block reveal">
+        <h3>1.1 Purpose</h3>
+        <p>
+          This document provides a comprehensive specification for the <strong>AI Diagnostic Studio</strong>, a desktop-integrated development environment (IDE) that combines AI-powered code analysis, natural language code generation, and real-time collaboration capabilities.
+        </p>
+        <p>
+          The purpose of this application is to enhance developer productivity by providing intelligent code diagnostics, automated bug detection, and collaborative coding features within a modern, feature-rich IDE interface.
+        </p>
+
+        <h3>1.2 Scope</h3>
+        <p>
+          The AI Diagnostic Studio is a full-stack desktop application designed for frontend developers. The application enables users to:
+        </p>
+        <ul>
+          <li>Open and manage existing frontend projects</li>
+          <li>Generate new projects using natural language AI prompts</li>
+          <li>Perform static code analysis to detect bugs, warnings, and code quality issues</li>
+          <li>Receive AI-powered suggestions and automated code fixes</li>
+          <li>Collaborate with team members in real-time through shared rooms</li>
+          <li>Execute build commands directly within the IDE</li>
+          <li>Edit code with a professional Monaco-based editor featuring syntax highlighting, IntelliSense, and multi-file support</li>
+        </ul>
+        <p>
+          The application targets individual developers and small to medium-sized development teams working on frontend projects using JavaScript, TypeScript, React, or similar web technologies.
+        </p>
+
+        <h3>1.3 Definitions, Acronyms, and Abbreviations</h3>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 24px auto 0;">
+        <table>
+          <thead>
+            <tr>
+              <th>Term</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>AI</code></td><td>Artificial Intelligence</td></tr>
+            <tr><td><code>API</code></td><td>Application Programming Interface</td></tr>
+            <tr><td><code>AST</code></td><td>Abstract Syntax Tree</td></tr>
+            <tr><td><code>CORS</code></td><td>Cross-Origin Resource Sharing</td></tr>
+            <tr><td><code>IDE</code></td><td>Integrated Development Environment</td></tr>
+            <tr><td><code>IPC</code></td><td>Inter-Process Communication</td></tr>
+            <tr><td><code>JSON</code></td><td>JavaScript Object Notation</td></tr>
+            <tr><td><code>MongoDB</code></td><td>Mongo Database (NoSQL)</td></tr>
+            <tr><td><code>REST</code></td><td>Representational State Transfer</td></tr>
+            <tr><td><code>SRS</code></td><td>Software Requirements Specification</td></tr>
+            <tr><td><code>UI</code></td><td>User Interface</td></tr>
+            <tr><td><code>UX</code></td><td>User Experience</td></tr>
+            <tr><td><code>WebSocket</code></td><td>Bidirectional communication protocol</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 2</div>
+        <h2 class="section__title">Product Features</h2>
+        <p class="section__description">
+          Six powerful feature modules working together to create the ultimate AI-powered development experience.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Project Management -->
+        <div class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--indigo">📁</div>
+          <h3 class="feature-card__title">Project Management</h3>
+          <p class="feature-card__text">Open, create, and manage frontend projects with an intuitive file explorer and AI-powered project generation.</p>
+          <ul class="feature-card__list">
+            <li>Open local projects via native dialog</li>
+            <li>Generate projects from AI prompts</li>
+            <li>Tree view navigation with search</li>
+            <li>Create, rename, delete files &amp; folders</li>
+          </ul>
+        </div>
+
+        <!-- Code Editor -->
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card__icon feature-card__icon--cyan">✏️</div>
+          <h3 class="feature-card__title">Code Editor</h3>
+          <p class="feature-card__text">Professional Monaco Editor integration with multi-tab editing, split views, and deep customisation options.</p>
+          <ul class="feature-card__list">
+            <li>Monaco Editor (VS Code engine)</li>
+            <li>20+ language syntax highlighting</li>
+            <li>Split view side-by-side editing</li>
+            <li>Customisable themes, fonts, minimap</li>
+          </ul>
+        </div>
+
+        <!-- AI-Powered Features -->
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card__icon feature-card__icon--emerald">🤖</div>
+          <h3 class="feature-card__title">AI-Powered Analysis</h3>
+          <p class="feature-card__text">Static code analysis with AI-powered explanations, bug detection, refactoring suggestions, and automated fixes.</p>
+          <ul class="feature-card__list">
+            <li>Static analysis &amp; issue detection</li>
+            <li>AI code explanation &amp; refactoring</li>
+            <li>Natural language code generation</li>
+            <li>Quick actions with Accept/Reject flow</li>
+          </ul>
+        </div>
+
+        <!-- Real-Time Collaboration -->
+        <div class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--rose">👥</div>
+          <h3 class="feature-card__title">Real-Time Collaboration</h3>
+          <p class="feature-card__text">Create or join shared rooms for live code sync, cursor sharing, in-editor chat, and screenshot sharing.</p>
+          <ul class="feature-card__list">
+            <li>Create &amp; join collaboration rooms</li>
+            <li>Live code synchronisation</li>
+            <li>Cursor position &amp; selection sharing</li>
+            <li>Chat with screenshots &amp; code snippets</li>
+          </ul>
+        </div>
+
+        <!-- Terminal -->
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-card__icon feature-card__icon--amber">⌨️</div>
+          <h3 class="feature-card__title">Integrated Terminal</h3>
+          <p class="feature-card__text">Execute shell commands, run build scripts, and manage processes directly from within the IDE.</p>
+          <ul class="feature-card__list">
+            <li>Execute shell commands in project dir</li>
+            <li>Run project build scripts</li>
+            <li>Process output display</li>
+            <li>Working directory navigation</li>
+          </ul>
+        </div>
+
+        <!-- Desktop Integration -->
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-card__icon feature-card__icon--violet">🖥️</div>
+          <h3 class="feature-card__title">Desktop Integration</h3>
+          <p class="feature-card__text">Native window controls, system file dialogs, and full desktop integration via Electron framework.</p>
+          <ul class="feature-card__list">
+            <li>Native window controls</li>
+            <li>System file dialogs</li>
+            <li>Application menu</li>
+            <li>Windows 10/11 optimised</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== USER CLASSES ====== -->
+  <section class="section" id="users">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 2.3</div>
+        <h2 class="section__title">User Classes &amp; Characteristics</h2>
+        <p class="section__description">
+          The application is designed to serve a range of developer personas, from beginners to advanced professionals.
+        </p>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 0 auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>User Class</th>
+              <th>Description</th>
+              <th>Technical Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Frontend Developers</strong></td>
+              <td>Primary users developing web applications</td>
+              <td>Intermediate to Advanced</td>
+            </tr>
+            <tr>
+              <td><strong>AI Enthusiasts</strong></td>
+              <td>Users exploring AI-assisted development</td>
+              <td>Beginner to Intermediate</td>
+            </tr>
+            <tr>
+              <td><strong>Development Teams</strong></td>
+              <td>Small teams collaborating on projects</td>
+              <td>Intermediate</td>
+            </tr>
+            <tr>
+              <td><strong>Students</strong></td>
+              <td>Learning web development with AI assistance</td>
+              <td>Beginner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== ARCHITECTURE ====== -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 2.1</div>
+        <h2 class="section__title">System Architecture</h2>
+        <p class="section__description">
+          A comprehensive view of how the Desktop Application (Electron), Backend Server (Express), and AI Service Layer interact.
+        </p>
+      </div>
+
+      <div class="architecture-diagram reveal">
+<pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                     Desktop Application (Electron)              │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │   Renderer      │  │    Main         │  │   Preload       │ │
+│  │   Process       │◄─│    Process      │◄─│   Script        │ │
+│  │   (React UI)    │  │   (Node.js)     │  │   (IPC Bridge)  │ │
+│  └────────┬────────┘  └────────┬────────┘  └─────────────────┘ │
+│           │                    │                                 │
+│           │         ┌──────────▼──────────┐                    │
+│           │         │   File System       │                    │
+│           │         │   Operations        │                    │
+│           │         └─────────────────────┘                    │
+└───────────┼─────────────────────────────────────────────────────┘
+            │ HTTP/WebSocket
+            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    Backend Server (Express)                      │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
+│  │   REST API  │  │  Socket.io  │  │   MongoDB   │             │
+│  │   Endpoints │  │   Server    │  │   (Optional)│             │
+│  └─────────────┘  └─────────────┘  └─────────────┘             │
+│                                                                  │
+│  ┌─────────────────────────────────────────────────────────────┐│
+│  │                    AI Service Layer                         ││
+│  │         (OpenAI GPT / Google Gemini)                        ││
+│  └─────────────────────────────────────────────────────────────┘│
+└─────────────────────────────────────────────────────────────────┘
+</pre>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== EXTERNAL INTERFACES ====== -->
+  <section class="section" id="interfaces">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 3</div>
+        <h2 class="section__title">External Interface Requirements</h2>
+        <p class="section__description">
+          User interfaces, hardware requirements, software interfaces, and communication protocols powering the system.
+        </p>
+      </div>
+
+      <!-- UI Description -->
+      <div class="content-block reveal">
+        <h3>3.1 User Interfaces</h3>
+
+        <h4>3.1.1 Welcome Screen</h4>
+        <ul>
+          <li>Application logo and branding</li>
+          <li>"Open Existing Project" button — opens native folder dialog</li>
+          <li>"Generate New Project" button — prompts for AI project description</li>
+          <li>Animated gradient background</li>
+          <li>Version information in footer</li>
+        </ul>
+
+        <h4>3.1.2 Main IDE Interface</h4>
+        <p>Once a project is opened or generated, the IDE displays:</p>
+        <ul>
+          <li><strong>TopBar (48px height)</strong> — Application logo, project name, toolbar buttons: Open Project, New AI Project, Collaborate, Run Analysis, Run, Debug, Save All, Shortcuts</li>
+          <li><strong>Left Panel (File Explorer, 200–400px)</strong> — Panel header with actions, search/filter input, hierarchical file tree with context menu</li>
+          <li><strong>Center Panel (Editor Area)</strong> — Tab bar, Monaco Editor with toolbar, collapsible terminal panel (192–256px height)</li>
+          <li><strong>Right Panel (AI/Collab, 260–500px)</strong> — Tab switcher for "Collab" or "AI Assistant", AI chat interface with quick actions, collaboration panel</li>
+          <li><strong>StatusBar (24px height)</strong> — Status message, issue count, room ID, cursor position, file language, encoding &amp; indentation settings</li>
+        </ul>
+
+        <h4>3.1.3 Modals and Dialogs</h4>
+        <ul>
+          <li><strong>Keyboard Shortcuts Modal</strong> — Displays all available shortcuts in a table format</li>
+          <li><strong>Collaboration Modal</strong> — Input for creating or joining a room</li>
+          <li><strong>Go-to-Line Modal</strong> — Quick navigation input</li>
+          <li><strong>Editor Settings Dropdown</strong> — Toggles for various editor preferences</li>
+        </ul>
+      </div>
+
+      <!-- Hardware Interfaces -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>3.2 Hardware Requirements</h3>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px; max-width: 900px; margin: 24px auto 0;">
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--perf">Minimum</div>
+          <h4 class="nfr-card__title">Minimum System Requirements</h4>
+          <ul>
+            <li>Processor: Intel Core i5 or equivalent</li>
+            <li>RAM: 4 GB (8 GB recommended)</li>
+            <li>Disk Space: 500 MB for installation</li>
+            <li>Display: 1024×768 minimum resolution</li>
+            <li>OS: Windows 10 (version 1803+) or later</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal reveal-delay-1">
+          <div class="nfr-card__category nfr-card__category--usability">Recommended</div>
+          <h4 class="nfr-card__title">Recommended System Requirements</h4>
+          <ul>
+            <li>Processor: Intel Core i7 or equivalent</li>
+            <li>RAM: 8 GB or more</li>
+            <li>Disk Space: 1 GB available</li>
+            <li>Display: 1920×1080 or higher</li>
+            <li>Network: Internet connection for AI features</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Software Interfaces (API) -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>3.3 Software Interfaces — Backend API Endpoints</h3>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 24px auto 0;">
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Endpoint</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>GET</code></td><td><code>/api/health</code></td><td>Health check</td></tr>
+            <tr><td><code>POST</code></td><td><code>/api/read-files</code></td><td>Read directory structure</td></tr>
+            <tr><td><code>POST</code></td><td><code>/api/save-files</code></td><td>Save modified files</td></tr>
+            <tr><td><code>POST</code></td><td><code>/api/run-analysis</code></td><td>Execute code analysis</td></tr>
+            <tr><td><code>POST</code></td><td><code>/api/get-ai-fix</code></td><td>Get AI code assistance</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- WebSocket Events -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>3.3 WebSocket Events</h3>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 24px auto 0;">
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Direction</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>join-room</code></td><td><span class="direction-badge">Client → Server</span></td><td>Join collaboration room</td></tr>
+            <tr><td><code>leave-room</code></td><td><span class="direction-badge">Client → Server</span></td><td>Leave collaboration room</td></tr>
+            <tr><td><code>code-update</code></td><td><span class="direction-badge">Bidirectional</span></td><td>Sync code changes</td></tr>
+            <tr><td><code>chat-message</code></td><td><span class="direction-badge">Bidirectional</span></td><td>Send/receive chat messages</td></tr>
+            <tr><td><code>typing</code></td><td><span class="direction-badge">Bidirectional</span></td><td>Typing status indicator</td></tr>
+            <tr><td><code>cursor-update</code></td><td><span class="direction-badge">Bidirectional</span></td><td>Cursor position sync</td></tr>
+            <tr><td><code>user-joined</code></td><td><span class="direction-badge">Server → Client</span></td><td>Notify user joined</td></tr>
+            <tr><td><code>user-left</code></td><td><span class="direction-badge">Server → Client</span></td><td>Notify user left</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Communication -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>3.4 Communication Interfaces</h3>
+        <h4>Client-Server Communication</h4>
+        <ul>
+          <li>HTTP/REST for synchronous API requests</li>
+          <li>WebSocket (Socket.io) for real-time collaboration</li>
+          <li>Default server port: <strong>3001</strong> (configurable via .env)</li>
+        </ul>
+        <h4>Inter-Process Communication (Electron)</h4>
+        <ul>
+          <li>IPC channels for file system operations</li>
+          <li>Async request-response pattern for file read/write</li>
+          <li>Event-based terminal output streaming</li>
+        </ul>
+        <h4>AI Provider APIs</h4>
+        <ul>
+          <li><strong>Google Gemini API</strong> (default): <code>generativelanguage.googleapis.com</code></li>
+          <li><strong>OpenAI API</strong> (optional): <code>api.openai.com/v1/chat/completions</code></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== FUNCTIONAL REQUIREMENTS ====== -->
+  <section class="section" id="requirements">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 4</div>
+        <h2 class="section__title">Functional Requirements</h2>
+        <p class="section__description">
+          The complete set of functional requirements organised by feature module, each with a unique requirement ID.
+        </p>
+      </div>
+
+      <!-- 4.1 Project Management -->
+      <div class="content-block reveal">
+        <h3>4.1 Project Management</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-001</span>
+            <span class="req-card__title">Open Existing Project</span>
+          </div>
+          <ul>
+            <li>Allow users to open a local project folder via native file dialog</li>
+            <li>Scan selected folder recursively for source files</li>
+            <li>Display the folder structure in the File Explorer</li>
+            <li>Support: .html, .css, .js, .jsx, .ts, .tsx, .json, .md, .txt, .env, .yml, .yaml</li>
+            <li>Exclude <code>node_modules</code> and files starting with "." from the tree</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-002</span>
+            <span class="req-card__title">Generate New Project</span>
+          </div>
+          <ul>
+            <li>Accept a natural language description of the desired project</li>
+            <li>Send the description to the AI service for code generation</li>
+            <li>Create the generated files in the user-selected location</li>
+            <li>Open the generated project automatically after creation</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-003</span>
+            <span class="req-card__title">File Operations</span>
+          </div>
+          <ul>
+            <li>Allow creating new files via context menu or toolbar</li>
+            <li>Allow creating new folders via context menu or toolbar</li>
+            <li>Allow renaming files and folders</li>
+            <li>Allow deleting files (with confirmation)</li>
+            <li>Allow copying file paths to clipboard</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.2 Code Editor -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>4.2 Code Editor</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-004</span>
+            <span class="req-card__title">File Editing</span>
+          </div>
+          <ul>
+            <li>Open files in a new tab when clicked in File Explorer</li>
+            <li>Display syntax highlighting appropriate to file extension</li>
+            <li>Allow editing files with real-time content updates</li>
+            <li>Mark modified files with an indicator (dot) on tab</li>
+            <li>Save files on Ctrl+S keyboard shortcut</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-005</span>
+            <span class="req-card__title">Tab Management</span>
+          </div>
+          <ul>
+            <li>Display open files as tabs in the editor area</li>
+            <li>Allow switching between tabs by clicking</li>
+            <li>Allow closing tabs with a close button</li>
+            <li>Close multiple tabs via context menu</li>
+            <li>Prompt to save unsaved changes when closing</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-006</span>
+            <span class="req-card__title">Editor Settings</span>
+          </div>
+          <ul>
+            <li>Allow toggling word wrap (on/off)</li>
+            <li>Allow toggling minimap (on/off)</li>
+            <li>Allow toggling between dark and light themes</li>
+            <li>Allow adjusting font size (8px to 24px)</li>
+            <li>Allow configuring tab size (2 or 4 spaces)</li>
+            <li>Allow toggling line numbers display</li>
+            <li>Allow toggling bracket pair colorisation</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-007</span>
+            <span class="req-card__title">Search and Navigation</span>
+          </div>
+          <ul>
+            <li>Provide find functionality (Ctrl+F)</li>
+            <li>Provide find and replace (Ctrl+H)</li>
+            <li>Provide go-to-line functionality (Ctrl+G)</li>
+            <li>Highlight search matches in the editor</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-008</span>
+            <span class="req-card__title">Split View</span>
+          </div>
+          <ul>
+            <li>Allow splitting the editor into two panes</li>
+            <li>Each pane shall display a different file or the same file</li>
+            <li>Split shall be adjustable by dragging the divider</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.3 AI-Powered Features -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>4.3 AI-Powered Features</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-009</span>
+            <span class="req-card__title">Code Analysis</span>
+          </div>
+          <ul>
+            <li>Analyse all supported files in the project</li>
+            <li>Detect: syntax errors, undefined variables, unused imports, potential bugs</li>
+            <li>Categorise findings by severity: error, warning, info</li>
+            <li>Display findings in the Status Bar and AI Panel</li>
+            <li>Each finding includes: message, file path, line number</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-010</span>
+            <span class="req-card__title">AI Assistance</span>
+          </div>
+          <ul>
+            <li>Provide quick actions: Explain Code, Find Bugs, Refactor, Suggest Improvements</li>
+            <li>Send current file context to AI along with user query</li>
+            <li>Display AI responses in the AI Panel</li>
+            <li>Support multi-turn conversations with AI</li>
+            <li>Display loading indicator while waiting for AI response</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-011</span>
+            <span class="req-card__title">AI Code Fixes</span>
+          </div>
+          <ul>
+            <li>Receive proposed file changes from AI as JSON</li>
+            <li>Display proposed changes with Accept/Reject buttons</li>
+            <li>Apply accepted changes directly to files</li>
+            <li>Provide Accept All option for multiple changes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.4 Collaboration -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>4.4 Real-Time Collaboration</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-012</span>
+            <span class="req-card__title">Room Management</span>
+          </div>
+          <ul>
+            <li>Allow creating a new collaboration room (generates random ID)</li>
+            <li>Allow joining an existing room by ID</li>
+            <li>Display current room ID in the TopBar and Status Bar</li>
+            <li>Allow leaving the current room</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-013</span>
+            <span class="req-card__title">Code Synchronisation</span>
+          </div>
+          <ul>
+            <li>Synchronise code changes to all users in the room</li>
+            <li>Show remote user cursor positions in the editor</li>
+            <li>Highlight text selected by remote users</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-014</span>
+            <span class="req-card__title">Chat and Messaging</span>
+          </div>
+          <ul>
+            <li>Allow sending text messages to the room</li>
+            <li>Display messages in chronological order</li>
+            <li>Allow sharing screenshots of the IDE</li>
+            <li>Allow sharing code snippets with jump-to functionality</li>
+            <li>Show typing indicators when others are composing</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.5 Terminal -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>4.5 Terminal</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-015</span>
+            <span class="req-card__title">Command Execution</span>
+          </div>
+          <ul>
+            <li>Accept shell commands from the terminal input</li>
+            <li>Execute commands in the project directory (or specified path)</li>
+            <li>Display command output in the terminal area</li>
+            <li>Support the 'cd' command for directory changes</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-016</span>
+            <span class="req-card__title">Process Management</span>
+          </div>
+          <ul>
+            <li>Display running process status</li>
+            <li>Allow terminating long-running processes</li>
+            <li>Display exit codes when processes complete</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4.6 Window -->
+      <div class="content-block reveal" style="margin-top: 48px;">
+        <h3>4.6 Window Management</h3>
+      </div>
+
+      <div style="max-width: 900px; margin: 20px auto 0;">
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-017</span>
+            <span class="req-card__title">Window Controls</span>
+          </div>
+          <ul>
+            <li>Provide minimize button functionality</li>
+            <li>Provide maximize/restore button functionality</li>
+            <li>Provide close button functionality</li>
+            <li>Use native window frame</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <div class="req-card__header">
+            <span class="req-card__id">FR-018</span>
+            <span class="req-card__title">Keyboard Shortcuts</span>
+          </div>
+          <ul>
+            <li>Support standard shortcuts (Ctrl+S, Ctrl+F, Ctrl+G)</li>
+            <li>Display all available shortcuts in a modal</li>
+            <li>Handle shortcuts even when editor has focus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== NON-FUNCTIONAL REQUIREMENTS ====== -->
+  <section class="section" id="nfr">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 5</div>
+        <h2 class="section__title">Non-Functional Requirements</h2>
+        <p class="section__description">
+          Performance benchmarks, usability standards, reliability guarantees, security measures, and compatibility targets.
+        </p>
+      </div>
+
+      <div class="nfr-grid">
+        <!-- Performance -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--perf">Performance</div>
+          <h4 class="nfr-card__title">NFR-001 – Application Startup</h4>
+          <ul>
+            <li>Launch within 5 seconds on supported hardware</li>
+            <li>Welcome screen visible within 2 seconds</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--perf">Performance</div>
+          <h4 class="nfr-card__title">NFR-002 – File Operations</h4>
+          <ul>
+            <li>Open file content within 500ms</li>
+            <li>Save file within 1 second</li>
+            <li>File tree loads in &lt; 2s for &lt; 1000 files</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--perf">Performance</div>
+          <h4 class="nfr-card__title">NFR-003 – AI Response Time</h4>
+          <ul>
+            <li>AI responses within 15 seconds</li>
+            <li>Loading indicator within 1 second of request</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--perf">Performance</div>
+          <h4 class="nfr-card__title">NFR-004 – Collaboration Latency</h4>
+          <ul>
+            <li>Code sync within 200ms</li>
+            <li>Cursor updates visible within 100ms</li>
+          </ul>
+        </div>
+
+        <!-- Usability -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--usability">Usability</div>
+          <h4 class="nfr-card__title">NFR-005 – Visual Design</h4>
+          <ul>
+            <li>Consistent dark theme throughout</li>
+            <li>Visible hover states for interactive elements</li>
+            <li>Tooltips on all buttons</li>
+            <li>Fully keyboard navigable UI</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--usability">Usability</div>
+          <h4 class="nfr-card__title">NFR-006 – Error Handling</h4>
+          <ul>
+            <li>User-friendly network error messages</li>
+            <li>Specific file operation error descriptions</li>
+            <li>AI errors suggest checking API config</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--usability">Usability</div>
+          <h4 class="nfr-card__title">NFR-007 – Accessibility</h4>
+          <ul>
+            <li>WCAG AA colour contrast</li>
+            <li>Focus indicators for keyboard navigation</li>
+            <li>Screen reader-compatible icon labels</li>
+          </ul>
+        </div>
+
+        <!-- Reliability -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--reliability">Reliability</div>
+          <h4 class="nfr-card__title">NFR-008 – Data Persistence</h4>
+          <ul>
+            <li>No unsaved change loss during normal operation</li>
+            <li>Prompt before closing with unsaved changes</li>
+            <li>Server disconnect won't crash the app</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--reliability">Reliability</div>
+          <h4 class="nfr-card__title">NFR-009 – Error Recovery</h4>
+          <ul>
+            <li>Failed API requests show retry options</li>
+            <li>Network reconnection restores collab state</li>
+            <li>Crashes produce meaningful error logs</li>
+          </ul>
+        </div>
+
+        <!-- Security -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--security">Security</div>
+          <h4 class="nfr-card__title">NFR-010 – API Key Protection</h4>
+          <ul>
+            <li>Keys stored in local .env file</li>
+            <li>Keys never transmitted to unauthorised endpoints</li>
+            <li>Keys masked in logs</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--security">Security</div>
+          <h4 class="nfr-card__title">NFR-011 – Electron Security</h4>
+          <ul>
+            <li>Context isolation enabled</li>
+            <li>Node integration disabled in renderer</li>
+            <li>Preload script exposes only necessary APIs</li>
+          </ul>
+        </div>
+
+        <!-- Compatibility -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--compat">Compatibility</div>
+          <h4 class="nfr-card__title">NFR-012 – Platform Support</h4>
+          <ul>
+            <li>Windows 10 (version 1803+)</li>
+            <li>Windows 11</li>
+            <li>High-DPI display support</li>
+          </ul>
+        </div>
+
+        <!-- Maintainability -->
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--maintain">Maintainability</div>
+          <h4 class="nfr-card__title">NFR-014 – Code Organisation</h4>
+          <ul>
+            <li>React best practices for frontend components</li>
+            <li>Separated backend routes and controllers</li>
+            <li>Configuration externalised to .env</li>
+          </ul>
+        </div>
+        <div class="nfr-card reveal">
+          <div class="nfr-card__category nfr-card__category--maintain">Maintainability</div>
+          <h4 class="nfr-card__title">NFR-015 – Build &amp; Deployment</h4>
+          <ul>
+            <li>Frontend buildable with Vite for production</li>
+            <li>Packageable as Windows .exe installer</li>
+            <li>Self-contained build artifacts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== FEATURE PRIORITY ====== -->
+  <section class="section" id="priority">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 6</div>
+        <h2 class="section__title">Feature Priority Matrix</h2>
+        <p class="section__description">
+          Features organised by priority level, from critical P0 requirements to nice-to-have P3 enhancements.
+        </p>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 0 auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Priority</th>
+              <th>Feature</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="priority-badge priority-badge--p0">P0</span></td>
+              <td><strong>File Editing</strong></td>
+              <td>Open, edit, save code files with Monaco</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p0">P0</span></td>
+              <td><strong>Project Opening</strong></td>
+              <td>Open local projects via file dialog</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p0">P0</span></td>
+              <td><strong>AI Code Analysis</strong></td>
+              <td>Detect bugs and issues in code</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p0">P0</span></td>
+              <td><strong>AI Assistance</strong></td>
+              <td>Get AI help via chat interface</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p1">P1</span></td>
+              <td><strong>Real-Time Collab</strong></td>
+              <td>Collaborate in shared rooms</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p1">P1</span></td>
+              <td><strong>Terminal</strong></td>
+              <td>Execute shell commands</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p1">P1</span></td>
+              <td><strong>Project Generation</strong></td>
+              <td>Generate code from AI prompts</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p2">P2</span></td>
+              <td><strong>Split Editor</strong></td>
+              <td>View two files side-by-side</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p2">P2</span></td>
+              <td><strong>Chat &amp; Screenshot</strong></td>
+              <td>Share messages and images in collab</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-badge--p3">P3</span></td>
+              <td><strong>Custom Themes</strong></td>
+              <td>Light/dark theme toggle</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== USE CASES ====== -->
+  <section class="section" id="use-cases">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 6.2</div>
+        <h2 class="section__title">Use Cases</h2>
+        <p class="section__description">
+          Five primary use cases illustrating how developers interact with the AI Diagnostic Studio in real-world scenarios.
+        </p>
+      </div>
+
+      <div class="usecase-grid">
+        <div class="usecase-card reveal">
+          <div class="usecase-card__id">UC-001</div>
+          <h4 class="usecase-card__title">Open and Edit Project</h4>
+          <ol>
+            <li>User launches application</li>
+            <li>Clicks "Open Existing Project"</li>
+            <li>Selects project folder via dialog</li>
+            <li>File tree loads in left panel</li>
+            <li>Clicks a file to open in editor</li>
+            <li>Edits code</li>
+            <li>Saves with Ctrl+S</li>
+          </ol>
+        </div>
+
+        <div class="usecase-card reveal reveal-delay-1">
+          <div class="usecase-card__id">UC-002</div>
+          <h4 class="usecase-card__title">Run Code Analysis</h4>
+          <ol>
+            <li>User has project open</li>
+            <li>Clicks "Run Analysis" in TopBar</li>
+            <li>Backend analyses all project files</li>
+            <li>Issues appear in Status Bar &amp; AI Panel</li>
+            <li>Clicks issue to see details</li>
+            <li>Clicks "Get AI Fix" for remediation</li>
+          </ol>
+        </div>
+
+        <div class="usecase-card reveal reveal-delay-2">
+          <div class="usecase-card__id">UC-003</div>
+          <h4 class="usecase-card__title">Get AI Code Help</h4>
+          <ol>
+            <li>User has file open in editor</li>
+            <li>Opens AI Panel (right side)</li>
+            <li>Clicks "Explain Code" quick action</li>
+            <li>System sends file context to AI</li>
+            <li>AI response appears in chat</li>
+            <li>User asks follow-up questions</li>
+          </ol>
+        </div>
+
+        <div class="usecase-card reveal">
+          <div class="usecase-card__id">UC-004</div>
+          <h4 class="usecase-card__title">Collaborate in Real-Time</h4>
+          <ol>
+            <li>User A clicks "Collaborate" in TopBar</li>
+            <li>Enters "create" to make room</li>
+            <li>Room ID is generated &amp; displayed</li>
+            <li>Shares room ID with User B</li>
+            <li>User B enters room ID to join</li>
+            <li>Both see each other's cursors</li>
+            <li>Code changes sync in real-time</li>
+          </ol>
+        </div>
+
+        <div class="usecase-card reveal reveal-delay-1">
+          <div class="usecase-card__id">UC-005</div>
+          <h4 class="usecase-card__title">Generate New Project</h4>
+          <ol>
+            <li>User clicks "Generate New Project"</li>
+            <li>Enters project description</li>
+            <li>System sends prompt to AI</li>
+            <li>AI generates code for multiple files</li>
+            <li>User selects save location</li>
+            <li>Files are created locally</li>
+            <li>Generated project opens automatically</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== TECH STACK ====== -->
+  <section class="section" id="tech-stack">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 7.1</div>
+        <h2 class="section__title">Technology Stack</h2>
+        <p class="section__description">
+          The full technology stack powering the frontend, backend, and development toolchain.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-card__header">
+            <span class="tech-card__header-icon">🎨</span> Frontend
+          </div>
+          <table>
+            <tr><td>Electron</td><td>28.x</td><td>Desktop framework</td></tr>
+            <tr><td>React</td><td>18.x</td><td>UI framework</td></tr>
+            <tr><td>Tailwind CSS</td><td>3.4.x</td><td>Styling</td></tr>
+            <tr><td>Monaco Editor</td><td>4.6.x</td><td>Code editing</td></tr>
+            <tr><td>Socket.io Client</td><td>4.8.x</td><td>Real-time comm</td></tr>
+            <tr><td>Lucide React</td><td>0.312.x</td><td>Icons</td></tr>
+            <tr><td>Axios</td><td>1.6.x</td><td>HTTP client</td></tr>
+            <tr><td>Vite</td><td>5.x</td><td>Build tool</td></tr>
+          </table>
+        </div>
+
+        <div class="tech-card reveal reveal-delay-1">
+          <div class="tech-card__header">
+            <span class="tech-card__header-icon">⚙️</span> Backend
+          </div>
+          <table>
+            <tr><td>Node.js</td><td>18+</td><td>Runtime</td></tr>
+            <tr><td>Express</td><td>4.18.x</td><td>Web framework</td></tr>
+            <tr><td>Socket.io</td><td>4.8.x</td><td>WebSocket server</td></tr>
+            <tr><td>OpenAI</td><td>4.26.x</td><td>AI SDK</td></tr>
+            <tr><td>Mongoose</td><td>8.1.x</td><td>MongoDB ODM</td></tr>
+            <tr><td>Dotenv</td><td>16.3.x</td><td>Configuration</td></tr>
+          </table>
+        </div>
+
+        <div class="tech-card reveal reveal-delay-2">
+          <div class="tech-card__header">
+            <span class="tech-card__header-icon">🛠️</span> Development
+          </div>
+          <table>
+            <tr><td>Concurrently</td><td>8.2.x</td><td>Run multiple processes</td></tr>
+            <tr><td>Electron Builder</td><td>24.9.x</td><td>Packaging</td></tr>
+            <tr><td>Wait-on</td><td>7.2.x</td><td>Process coordination</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== FILE STRUCTURE ====== -->
+  <section class="section" id="file-structure">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 7.2</div>
+        <h2 class="section__title">Project File Structure</h2>
+        <p class="section__description">
+          A complete layout of the project's directory structure across frontend, backend, and electron modules.
+        </p>
+      </div>
+
+      <div class="file-tree reveal" style="max-width: 900px; margin: 0 auto;">
+<pre><span class="file-tree__folder">LLM_Powered_Frontend_Code_editor/</span>
+├── <span class="file-tree__folder">frontend/</span>
+│   ├── <span class="file-tree__folder">src/</span>
+│   │   ├── <span class="file-tree__folder">components/</span>
+│   │   │   ├── <span class="file-tree__file">IDE.jsx</span>              <span class="file-tree__comment"># Main IDE layout</span>
+│   │   │   ├── <span class="file-tree__file">EditorPanel.jsx</span>     <span class="file-tree__comment"># Monaco editor</span>
+│   │   │   ├── <span class="file-tree__file">AIPanel.jsx</span>         <span class="file-tree__comment"># AI assistant</span>
+│   │   │   ├── <span class="file-tree__file">CollaborationPanel.jsx</span>  <span class="file-tree__comment"># Collab chat</span>
+│   │   │   ├── <span class="file-tree__file">FileExplorer.jsx</span>    <span class="file-tree__comment"># File tree</span>
+│   │   │   ├── <span class="file-tree__file">TerminalPanel.jsx</span>   <span class="file-tree__comment"># Terminal</span>
+│   │   │   ├── <span class="file-tree__file">TopBar.jsx</span>          <span class="file-tree__comment"># Toolbar</span>
+│   │   │   ├── <span class="file-tree__file">StatusBar.jsx</span>       <span class="file-tree__comment"># Status display</span>
+│   │   │   └── <span class="file-tree__file">WelcomeScreen.jsx</span>   <span class="file-tree__comment"># Landing</span>
+│   │   ├── <span class="file-tree__folder">context/</span>
+│   │   │   └── <span class="file-tree__file">AppContext.jsx</span>      <span class="file-tree__comment"># State management</span>
+│   │   ├── <span class="file-tree__file">socket.js</span>               <span class="file-tree__comment"># Socket client</span>
+│   │   ├── <span class="file-tree__file">App.jsx</span>                 <span class="file-tree__comment"># Root component</span>
+│   │   ├── <span class="file-tree__file">main.jsx</span>                <span class="file-tree__comment"># Entry point</span>
+│   │   └── <span class="file-tree__file">index.css</span>               <span class="file-tree__comment"># Styles</span>
+│   ├── <span class="file-tree__file">package.json</span>
+│   ├── <span class="file-tree__file">tailwind.config.js</span>
+│   └── <span class="file-tree__file">vite.config.js</span>
+├── <span class="file-tree__folder">backend/</span>
+│   ├── <span class="file-tree__file">server.js</span>                   <span class="file-tree__comment"># Express server</span>
+│   ├── <span class="file-tree__folder">routes/</span>                     <span class="file-tree__comment"># API routes</span>
+│   ├── <span class="file-tree__folder">controllers/</span>                <span class="file-tree__comment"># Request handlers</span>
+│   ├── <span class="file-tree__folder">services/</span>
+│   │   ├── <span class="file-tree__file">aiService.js</span>            <span class="file-tree__comment"># AI integration</span>
+│   │   └── <span class="file-tree__file">analyzer.js</span>             <span class="file-tree__comment"># Code analysis</span>
+│   ├── <span class="file-tree__folder">models/</span>                     <span class="file-tree__comment"># MongoDB schemas</span>
+│   ├── <span class="file-tree__file">package.json</span>
+│   └── <span class="file-tree__file">.env</span>                        <span class="file-tree__comment"># Configuration</span>
+├── <span class="file-tree__folder">electron/</span>
+│   ├── <span class="file-tree__file">main.js</span>                     <span class="file-tree__comment"># Main process</span>
+│   └── <span class="file-tree__file">preload.js</span>                  <span class="file-tree__comment"># IPC bridge</span>
+├── <span class="file-tree__file">package.json</span>                    <span class="file-tree__comment"># Root config</span>
+└── <span class="file-tree__file">README.md</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== CONFIGURATION ====== -->
+  <section class="section" id="config">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 7.3</div>
+        <h2 class="section__title">Configuration Reference</h2>
+        <p class="section__description">
+          Environment variables used to configure the backend server, AI providers, and database connections.
+        </p>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 900px; margin: 0 auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Required</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>PORT</code></td>
+              <td><span class="env-optional">No</span></td>
+              <td>3001</td>
+              <td>Server port number</td>
+            </tr>
+            <tr>
+              <td><code>AI_PROVIDER</code></td>
+              <td><span class="env-optional">No</span></td>
+              <td>gemini</td>
+              <td>AI provider (gemini/openai)</td>
+            </tr>
+            <tr>
+              <td><code>GEMINI_API_KEY</code></td>
+              <td><span class="env-required">Yes*</span></td>
+              <td>—</td>
+              <td>Google Gemini API key</td>
+            </tr>
+            <tr>
+              <td><code>OPENAI_API_KEY</code></td>
+              <td><span class="env-required">Yes*</span></td>
+              <td>—</td>
+              <td>OpenAI API key</td>
+            </tr>
+            <tr>
+              <td><code>MONGODB_URI</code></td>
+              <td><span class="env-optional">No</span></td>
+              <td>—</td>
+              <td>MongoDB connection string</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="reveal" style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">
+        * One of the AI provider keys is required depending on selected provider.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== KEYBOARD SHORTCUTS ====== -->
+  <section class="section" id="shortcuts">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 7.4</div>
+        <h2 class="section__title">Keyboard Shortcuts</h2>
+        <p class="section__description">
+          All available keyboard shortcuts for efficient navigation and editing within the IDE.
+        </p>
+      </div>
+
+      <div class="shortcuts-grid reveal" style="max-width: 900px; margin: 0 auto;">
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Save File</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">S</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Find</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">F</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Find and Replace</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">H</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Go to Line</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">G</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Close File</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Toggle Comment</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">/</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Duplicate Line</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">D</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Move Line Up</span>
+          <div class="shortcut-item__keys"><span class="kbd">Alt</span><span class="kbd">↑</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Move Line Down</span>
+          <div class="shortcut-item__keys"><span class="kbd">Alt</span><span class="kbd">↓</span></div>
+        </div>
+        <div class="shortcut-item">
+          <span class="shortcut-item__action">Toggle Terminal</span>
+          <div class="shortcut-item__keys"><span class="kbd">Ctrl</span><span class="kbd">`</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ====== REVISION HISTORY ====== -->
+  <section class="section" id="revision">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Section 8</div>
+        <h2 class="section__title">Revision History</h2>
+      </div>
+
+      <div class="table-wrapper reveal" style="max-width: 600px; margin: 0 auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Date</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1.0</strong></td>
+              <td>2024</td>
+              <td>Initial SRS document</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Final CTA -->
+      <div style="text-align: center; margin-top: 80px;" class="reveal">
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em;">
+          Ready to get started?
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">
+          Download the AI Diagnostic Studio for Windows and experience the future of AI-powered development.
+        </p>
+        <a href="https://drive.google.com/file/d/1B5UkceSL4uQeW7M4w4EOEhnEGADZLt66/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="footerDownloadBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download for Windows (.exe)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">AI</div>
+        <span class="footer__name">AI Diagnostic Studio</span>
+      </div>
+      <span class="footer__copy">&copy; 2024 AI Diagnostic Studio. All rights reserved.</span>
+      <span class="footer__version">SRS v1.0</span>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
