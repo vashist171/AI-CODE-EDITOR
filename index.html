@@ -161,6 +161,101 @@
     </div>
   </section>
 
+  <!-- ====== DETAILED FEATURES ====== -->
+  <section class="content-section alternate-bg">
+    <div class="container">
+      <h3 class="content-section__title text-center reveal">Detailed Features</h3>
+      <div class="req-grid reveal">
+        <div class="req-card">
+          <h4>Project Management</h4>
+          <ul>
+            <li>Open existing projects from local file system</li>
+            <li>Generate new projects from AI prompts</li>
+            <li>File explorer with tree view navigation</li>
+            <li>Create, rename, and delete files and folders</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <h4>Code Editor</h4>
+          <ul>
+            <li>Monaco Editor integration (VS Code engine)</li>
+            <li>Multi-tab editing with file tabs</li>
+            <li>Split view for side-by-side comparison</li>
+            <li>Syntax highlighting for 20+ languages</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <h4>AI-Powered Features</h4>
+          <ul>
+            <li>Static code analysis with issue detection</li>
+            <li>AI code explanation and refactoring suggestions</li>
+            <li>Automated bug detection and fixes</li>
+            <li>Natural language code generation</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <h4>Real-Time Collaboration</h4>
+          <ul>
+            <li>Create and join collaboration rooms</li>
+            <li>Live code synchronization</li>
+            <li>Cursor position sharing</li>
+            <li>In-editor chat with text, screenshots, and code snippets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TECH STACK & FILE STRUCTURE ====== -->
+  <section class="content-section">
+    <div class="container grid-2">
+      <!-- Technology Stack -->
+      <div class="reveal">
+        <h3 class="content-section__title">Technology Stack</h3>
+        <div class="req-card" style="height: 100%;">
+          <h4>Frontend</h4>
+          <ul>
+            <li><strong>Electron</strong> (Desktop framework)</li>
+            <li><strong>React</strong> (UI framework)</li>
+            <li><strong>Monaco Editor</strong> (Code editing)</li>
+            <li><strong>Socket.io Client</strong> (Real-time comm)</li>
+          </ul>
+          <h4 style="margin-top: 24px;">Backend</h4>
+          <ul>
+            <li><strong>Node.js & Express</strong> (Runtime/Web framework)</li>
+            <li><strong>Socket.io</strong> (WebSocket server)</li>
+            <li><strong>OpenAI / Gemini</strong> (AI SDK)</li>
+            <li><strong>Mongoose</strong> (MongoDB ODM)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- File Structure -->
+      <div class="reveal" style="transition-delay: 0.1s;">
+        <h3 class="content-section__title">File Structure</h3>
+        <div class="security-card" style="height: 100%; font-family: var(--font-mono, monospace); font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary); overflow-x: auto;">
+          <span style="color: var(--accent-orange); font-weight: bold;">LLM_Powered_Frontend_Code_editor/</span><br>
+          ├── <span style="color: var(--accent-orange); font-weight: bold;">frontend/</span><br>
+          │   ├── <span style="color: var(--accent-orange); font-weight: bold;">src/</span><br>
+          │   │   ├── <span style="color: var(--accent-orange); font-weight: bold;">components/</span><br>
+          │   │   ├── <span style="color: var(--accent-orange); font-weight: bold;">context/</span><br>
+          │   │   ├── App.jsx<br>
+          │   │   └── main.jsx<br>
+          │   └── package.json<br>
+          ├── <span style="color: var(--accent-orange); font-weight: bold;">backend/</span><br>
+          │   ├── server.js<br>
+          │   ├── <span style="color: var(--accent-orange); font-weight: bold;">routes/</span><br>
+          │   ├── <span style="color: var(--accent-orange); font-weight: bold;">services/</span><br>
+          │   └── .env<br>
+          ├── <span style="color: var(--accent-orange); font-weight: bold;">electron/</span><br>
+          │   ├── main.js<br>
+          │   └── preload.js<br>
+          └── README.md
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ====== CTA ====== -->
   <section class="cta-section reveal">
     <div class="container text-center">
